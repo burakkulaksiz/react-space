@@ -2,17 +2,12 @@ import React, { Component } from "react";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
 export default class CategoryList extends Component {
-  constructor(props) {
-    super(props);
-    state: {
-    }
-  }
-
   render() {
     return (
       <div>
-        <h3>{this.props.title}</h3>
-        {/* Note: burada this keyword componenti gösterir fakat c# ve javada CategoryList'i gösterir. Bu durumu ayırt et. */}
+        <h3>{this.props.info.title}</h3>
+        <h3>{this.props.info.anotherTitle}</h3>
+
         <ListGroup>
           <ListGroupItem>Cras justo odio</ListGroupItem>
           <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>

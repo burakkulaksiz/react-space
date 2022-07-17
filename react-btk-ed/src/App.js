@@ -5,8 +5,8 @@ import Navi from "./Navi";
 import ProductList from "./ProductList";
 
 function App() {
-  let titleCategory = "Category List";
-  let titleProduct = "Product List";
+  let categoryInfo = { title: "Category List", anotherTitle: "From another Title" };
+  let productInfo = { title: "Product List" };
 
   return (
     <div>
@@ -17,11 +17,11 @@ function App() {
         <Row>
           <Col xs="3">
             {" "}
-            <CategoryList title={titleCategory} />
+            <CategoryList info={categoryInfo} />
           </Col>
           <Col xs="9">
             {" "}
-            <ProductList title={titleProduct} />
+            <ProductList info={productInfo} />
           </Col>
         </Row>
       </Container>
