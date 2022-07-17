@@ -5,7 +5,7 @@ import Navi from "./Navi";
 import ProductList from "./ProductList";
 
 function App() {
-  let categoryInfo = { title: "Category List", anotherTitle: "From another Title" };
+  let categoryInfo = { title: "Category List" };
   let productInfo = { title: "Product List" };
 
   return (
