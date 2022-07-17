@@ -7,11 +7,6 @@ export default class CategoryList extends Component {
       { categoryId: 1, categoryName: "Beverages" },
       { categoryId: 2, categoryName: "Condiments" },
     ],
-    currentCategory: "",
-  };
-
-  changeCategory = (category) => {
-    this.setState({ currentCategory: category.categoryName });
   };
 
   render() {
@@ -21,17 +16,12 @@ export default class CategoryList extends Component {
 
         <ListGroup>
           {this.state.categories.map((category) => (
-            // <ListGroupItem onClick={() => this.setState({ currentCategory: category.categoryName })} key={category.categoryId}>
-            //   {category.categoryName}
-            // </ListGroupItem>
-
-            // Yukarıdaki yöntemde fonksiyonu direk onClick içine yazdık fakat aşağıda yukarıda yazılan fonksiyonu çağırdık
-            <ListGroupItem onClick={() => this.changeCategory(category)} key={category.categoryId}>
+            <ListGroupItem onClick={() => this.props.changeCategory(category)} key={category.categoryId}>
               {category.categoryName}
             </ListGroupItem>
           ))}
         </ListGroup>
-        <h4> {this.state.currentCategory} </h4>
+        <h4> {this.props.currentCategory} </h4>
       </div>
     );
   }
