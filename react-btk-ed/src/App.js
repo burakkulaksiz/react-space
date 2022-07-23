@@ -4,6 +4,7 @@ import { Container, Row, Col } from "reactstrap";
 import CategoryList from "./CategoryList";
 import Navi from "./Navi";
 import ProductList from "./ProductList";
+import alertify from "alertifyjs";
 
 // changeCategory fonksiyonunu bu componente taşıyacağımız için bu componenti class componente çevirdik
 export default class App extends Component {
@@ -43,6 +44,9 @@ export default class App extends Component {
       newCart.push({ product: product, quantity: 1 });
     }
     this.setState({ cart: newCart });
+    // Detaylar için alertify websitesine bakabilirsin
+    // sondaki parametre süreyi gösterir
+    alertify.success(product.productName + " added to cart", 2);
   };
 
   removeFromCart = (product) => {
